@@ -62,12 +62,15 @@ const NavBar = () => {
                 <NavLink className={({ isActive }) =>
                     isActive ? "  font-medium border-b-2 border-primary-color text-primary-color p-2" : " font-medium  p-2 rounded-lg hover:text-primary-color"
                 } to='/addSpot'>Add Spot</NavLink>
-                <NavLink className={({ isActive }) =>
+                {/* <NavLink className={({ isActive }) =>
                     isActive ? "  font-medium border-b-2 border-primary-color text-primary-color p-2" : "font-medium  p-2 rounded-lg hover:text-primary-color"
-                } to='/updateProfile'>Update Profile</NavLink>
+                } to='/updateProfile'>Update Profile</NavLink> */}
 
             </>
         }
+        <NavLink className={({ isActive }) =>
+            isActive ? "  font-medium border-b-2 border-primary-color text-primary-color p-2" : "font-medium  p-2 rounded-lg hover:text-primary-color"
+        } to={`/allSpots`}>All Tourist Spots</NavLink>
         <NavLink className={({ isActive }) =>
             isActive ? "  font-medium border-b-2 border-primary-color text-primary-color p-2" : "font-medium  p-2 rounded-lg hover:text-primary-color"
         } to={`/blogs/${1}`}>Blogs</NavLink>

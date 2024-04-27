@@ -12,6 +12,7 @@ import Login from './Pages/Login/Login';
 import { Toaster } from 'react-hot-toast';
 import Register from './Pages/Register/Register';
 import AddTouristSpot from './Pages/AddTouristSpot/AddTouristSpot';
+import AllSpots from './Pages/AllSpots/AllSpots';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,12 @@ const router = createBrowserRouter([
       {
         path:'/addSpot',
         element:<AddTouristSpot></AddTouristSpot>,
+        
+      },
+      {
+        path:'/allSpots',
+        element:<AllSpots></AllSpots>,
+        loader: () => fetch('http://localhost:5000/allTouristSpots')
         
       }
     ]

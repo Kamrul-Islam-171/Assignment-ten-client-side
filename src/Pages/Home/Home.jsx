@@ -28,7 +28,7 @@ const Home = () => {
                 <h1 className="lg:text-5xl text-xl md:text-3xl text-center font-medium">Tourists Spots</h1>
                 <div className="grid lg:grid-cols-3 md:grid-cols2 gap-5">
                     {
-                        spots.map(spotInfo => <SpotCard spotInfo = {spotInfo} key={spotInfo._id}></SpotCard>)
+                        spots.map(spotInfo => <SpotCard spotInfo = {spotInfo} isShow = {false} key={spotInfo._id}></SpotCard>)
                     }
                 </div>
             </div>
