@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  
   theme: {
     extend: {
       colors: {
@@ -14,5 +15,8 @@ export default {
     },
   },
   plugins: [require("daisyui")],
+  daisyui: {
+    themes: ['light', 'dark'],
+  },
 }
 
