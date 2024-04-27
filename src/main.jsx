@@ -13,6 +13,9 @@ import { Toaster } from 'react-hot-toast';
 import Register from './Pages/Register/Register';
 import AddTouristSpot from './Pages/AddTouristSpot/AddTouristSpot';
 import AllSpots from './Pages/AllSpots/AllSpots';
+import SpotDetails from './Pages/SpotDetails/SpotDetails';
+import PrivateRoute from './Utilities/PrivateRoute/PrivateRouts';
+import MyLists from './Pages/MyLists/MyLists';
 
 const router = createBrowserRouter([
   {
@@ -34,7 +37,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/addSpot',
-        element:<AddTouristSpot></AddTouristSpot>,
+        element: <PrivateRoute><AddTouristSpot></AddTouristSpot></PrivateRoute>
         
       },
       {
@@ -42,6 +45,14 @@ const router = createBrowserRouter([
         element:<AllSpots></AllSpots>,
         loader: () => fetch('http://localhost:5000/allTouristSpots')
         
+      },
+      {
+        path:'/spot/:id',
+        element : <PrivateRoute><SpotDetails></SpotDetails></PrivateRoute>
+      },
+      {
+        path:'/myLists',
+        element:<MyLists></MyLists>
       }
     ]
   },

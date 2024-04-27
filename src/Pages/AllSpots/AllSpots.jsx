@@ -6,11 +6,13 @@ import { useEffect, useState } from "react";
 
 const AllSpots = () => {
     const data = useLoaderData();
-    const [toggle, setToggle] = useState(false)
+    const [toggle, setToggle] = useState(false);
+    // const [loading, setLoading] = useState(false);
     console.log(data)
     const [sortData, setSortData] = useState(data);
 
     const handleSort = () => {
+        // setLoading(true);
         setToggle(!toggle)
         data.sort(function(a, b){
             return a.avgCost - b.avgCost;
@@ -19,8 +21,10 @@ const AllSpots = () => {
     }
     useEffect(() => {
         setSortData(data)
+        // setLoading(false)
     }, [toggle, data])
 
+    // if(loading) {<span className="loading loading-spinner loading-lg"></span>}
     return (
         <div className="container mx-auto">
             <Helmet>

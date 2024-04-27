@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import './card.css'
 
 
@@ -27,7 +28,7 @@ const SpotCard = ({ spotInfo, isShow }) => {
                         </div>
                     </div>
                 }
-                <button className="btn bg-white text-primary-color hover:bg-primary-color hover:text-white border border-primary-color px-5">View Details</button>
+                <Link to={`/spot/${_id}`}><button className="btn mt-2 bg-white text-primary-color hover:bg-primary-color hover:text-white border border-primary-color px-5">View Details</button></Link>
             </div>
         </div>
     );
