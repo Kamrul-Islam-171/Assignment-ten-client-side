@@ -5,19 +5,29 @@ import { MdEdit } from "react-icons/md";
 import { MdDeleteForever } from "react-icons/md";
 
 import Swal from 'sweetalert2'
+import { Helmet } from "react-helmet-async";
 
 const MyLists = () => {
     const { user } = useContext(AuthContext);
     const [myData, setMydata] = useState([]);
+    const [deleteCnt, setDeleteCnt] = useState(false)
+    // const [loading, setLoading] = useState(false);
     console.log(user)
 
     console.log("hello")
 
     useEffect(() => {
+        // setLoading(true);
         fetch(`http://localhost:5000/mySpots/${user.email}`)
             .then(res => res.json())
-            .then(data => setMydata(data))
-    }, [user])
+            .then(data => {
+                setMydata(data)
+                // setLoading(false);
+            })
+    }, [user, deleteCnt])
+    // if(loading) {
+    //     <span className="loading loading-spinner loading-lg"></span>
+    // }
 
     const handleDelete = id => {
         // console.log(id)
@@ -42,6 +52,7 @@ const MyLists = () => {
                                 text: "Your file has been deleted.",
                                 icon: "success"
                             });
+                            setDeleteCnt(!deleteCnt);
 
                         }
                     })
@@ -59,6 +70,9 @@ const MyLists = () => {
     console.log(myData)
     return (
         <div className="container mx-auto">
+            <Helmet>
+                <title>My Lists</title>
+            </Helmet>
             {/* <div className="grid lg:grid-cols-3 md:grid-cols2 gap-5">
                 {
                     myData.map(spotInfo => <SpotCard spotInfo={spotInfo} isShow={true} key={spotInfo._id}></SpotCard>)

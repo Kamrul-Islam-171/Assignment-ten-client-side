@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './card.css'
 
 
-const SpotCard = ({ spotInfo, isShow }) => {
+const SpotCard = ({ spotInfo, isShow, isDescription }) => {
     const { _id, photoUrl, spotName, country, location, description, avgCost, season, travelTime, totalVisitors } = spotInfo
     // console.log(country)
     return (
@@ -13,8 +13,9 @@ const SpotCard = ({ spotInfo, isShow }) => {
             </div>
             <div className="space-y-1 px-5 py-5 ">
                 <h1 className={isShow ? 'text-2xl font-medium' : 'text-2xl font-medium text-primary-color'}>{spotName}</h1>
-
+                
                 <p className={isShow && 'text-primary-color'}>{location}, <span className="ml-2">{country}</span></p>
+                {isDescription && <p className='text-justify'>{description}</p>}
                 {
                     isShow && <div>
 

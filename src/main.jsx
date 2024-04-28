@@ -16,6 +16,7 @@ import AllSpots from './Pages/AllSpots/AllSpots';
 import SpotDetails from './Pages/SpotDetails/SpotDetails';
 import PrivateRoute from './Utilities/PrivateRoute/PrivateRouts';
 import MyLists from './Pages/MyLists/MyLists';
+import CountrySpots from './Pages/CountrySpots/CountrySpots';
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
       {
         path:'/myLists',
         element:<PrivateRoute><MyLists></MyLists></PrivateRoute>
+      },
+      {
+        path:'/touristSpots/:country',
+        element:<CountrySpots></CountrySpots>
       }
     ]
   },
