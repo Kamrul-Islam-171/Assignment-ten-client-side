@@ -8,23 +8,12 @@ const AllSpots = () => {
     const data = useLoaderData();
     const [toggle, setToggle] = useState(false);
     const [defaultData, setDefaultData] = useState(false);
-    // const [loading, setLoading] = useState(false);
-    // console.log(data)
+    
     const [sortData, setSortData] = useState(data);
 
-    // const handleSort = () => {
-    //     // setLoading(true);
-    //     setToggle(!toggle)
-    //     // console.log(toggle)
-    //     // data.sort(function(a, b){
-    //     //     return a.avgCost - b.avgCost;
-    //     // })
-
-    // }
+    
     useEffect(() => {
-        // setSortData(data)
         
-        // console.log('i ma in')
         console.log(defaultData)
         console.log('toggle = ', toggle)
         if (toggle === true) {

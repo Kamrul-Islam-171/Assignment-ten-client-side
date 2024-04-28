@@ -7,7 +7,7 @@ const MainRoutes = () => {
     return (
         <div>
             <Header></Header>
-            <div className="mt-[90px]">
+            <div className="mt-[80px]">
                 <Outlet></Outlet>
             </div>
             <Footer></Footer>

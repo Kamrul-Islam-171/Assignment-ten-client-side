@@ -70,7 +70,7 @@ const MyLists = () => {
 
     console.log(myData)
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto mb-12">
             <Helmet>
                 <title>My Lists</title>
             </Helmet>
