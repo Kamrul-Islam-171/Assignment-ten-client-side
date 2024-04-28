@@ -7,22 +7,43 @@ import { useEffect, useState } from "react";
 const AllSpots = () => {
     const data = useLoaderData();
     const [toggle, setToggle] = useState(false);
+    const [defaultData, setDefaultData] = useState(false);
     // const [loading, setLoading] = useState(false);
-    console.log(data)
+    // console.log(data)
     const [sortData, setSortData] = useState(data);
 
-    const handleSort = () => {
-        // setLoading(true);
-        setToggle(!toggle)
-        data.sort(function(a, b){
-            return a.avgCost - b.avgCost;
-        })
-        
-    }
+    // const handleSort = () => {
+    //     // setLoading(true);
+    //     setToggle(!toggle)
+    //     // console.log(toggle)
+    //     // data.sort(function(a, b){
+    //     //     return a.avgCost - b.avgCost;
+    //     // })
+
+    // }
     useEffect(() => {
-        setSortData(data)
-        // setLoading(false)
-    }, [toggle, data])
+        // setSortData(data)
+        
+        // console.log('i ma in')
+        console.log(defaultData)
+        console.log('toggle = ', toggle)
+        if (toggle === true) {
+
+            fetch('http://localhost:5000/allSortedTouristSpots')
+                .then(res => res.json())
+                .then(data => setSortData(data))
+             
+        }
+        else if (defaultData === true) {
+
+            fetch('http://localhost:5000/allTouristSpots')
+                .then(res => res.json())
+                .then(data => {
+                    setSortData(data);
+                })
+                
+        }
+    }, [toggle, defaultData])
 
     // if(loading) {<span className="loading loading-spinner loading-lg"></span>}
     return (
@@ -34,7 +55,14 @@ const AllSpots = () => {
                 <div className="dropdown dropdown-bottom">
                     <div tabIndex={0} role="button" className="btn m-1 border border-primary-color bg-white text-primary-color hover:bg-primary-color hover:text-white">Sort By</div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                        <li onClick={ handleSort} className="hover:bg-primary-color hover:text-white hover:rounded-md"><a>Average Cost</a></li>
+                        <li onClick={() => {
+                            setDefaultData(true)
+                            setToggle(false)
+                        }} className="hover:bg-primary-color hover:text-white hover:rounded-md"><a>Default</a></li>
+                        <li onClick={() => {
+                            setToggle(true)
+                            setDefaultData(false)
+                        }} className="hover:bg-primary-color hover:text-white hover:rounded-md"><a>Average Cost</a></li>
                     </ul>
                 </div>
             </div>

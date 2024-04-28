@@ -6,6 +6,7 @@ import { MdDeleteForever } from "react-icons/md";
 
 import Swal from 'sweetalert2'
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const MyLists = () => {
     const { user } = useContext(AuthContext);
@@ -100,7 +101,7 @@ const MyLists = () => {
                                 <td>{item.country}</td>
                                 <td>{item.location}</td>
                                 <div className="grid gap-3 lg:grid-cols-2 md:grid-cols-2">
-                                    <button title="Edit" className="btn mt-2 mb-2 text-xl border border-primary-color  text-primary-color hover:bg-primary-color hover:text-white"><MdEdit /></button>
+                                    <Link to={`/update/${item._id}`}><button title="Edit" className="btn mt-2 mb-2 text-xl border border-primary-color  text-primary-color hover:bg-primary-color hover:text-white"><MdEdit /></button></Link>
                                     <button onClick={() => handleDelete(item._id)} title="Remove" className="btn mt-2 mb-2 text-xl border border-primary-color  text-primary-color hover:bg-primary-color hover:text-white"><MdDeleteForever /></button>
                                 </div>
                             </tr>)

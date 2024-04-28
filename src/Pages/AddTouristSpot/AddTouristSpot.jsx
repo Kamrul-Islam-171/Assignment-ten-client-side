@@ -84,23 +84,23 @@ const AddTouristSpot = () => {
 
     }
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto bg-third-color px-6 py-3 rounded-md">
             <Helmet>
                 <title>Add Spot</title>
             </Helmet>
-            <h1 className="text-5xl text-center">Add Your Spot</h1>
-            <div>
-                <form noValidate="" className="space-y-3 mt-10 mb-10" onSubmit={handleSubmit(onSubmit)}>
+            <h1 className="text-5xl text-center font-medium">Add Your Spot</h1>
+            <div className="">
+                <form noValidate="" className="space-y-3 mt-10 mb-6 " onSubmit={handleSubmit(onSubmit)}>
                     <div className="grid lg:grid-cols-2 gap-3 md:grid-cols-2">
                         <div className="space-y-1 text-sm">
-                            <label htmlFor="photoUrl" className="block text-gray-700 text-lg">Location URL</label>
+                            <label htmlFor="photoUrl" className="block  text-lg ">Location URL</label>
                             <input type="text" {...register("photoUrl", { required: true })} placeholder="URL" className="border border-primary-color w-full px-4 py-3 rounded-md border-gray-700  focus:border-violet-400" />
                             {errors?.photoUrl?.types?.required && <p className="text-red-500">This field is required</p>}
 
                         </div>
 
                         <div className="space-y-1 text-sm">
-                            <label htmlFor="spotName" className="block text-gray-700 text-lg">Tourists Spot Name</label>
+                            <label htmlFor="spotName" className="block  text-lg">Tourists Spot Name</label>
                             <input type="text" {...register('spotName', { required: true })} placeholder="Spot Name" className="border border-primary-color w-full px-4 py-3 rounded-md border-gray-700  focus:border-violet-400" />
 
                             {errors?.name?.types?.required && <p className="text-red-500">This field is required</p>}
@@ -108,7 +108,7 @@ const AddTouristSpot = () => {
                     </div>
                     <div className="grid lg:grid-cols-2 gap-3 md:grid-cols-2">
                         <div className="space-y-1 text-sm">
-                            <label htmlFor="country" className="block text-gray-700 text-lg">Country Name</label>
+                            <label htmlFor="country" className="block  text-lg">Country Name</label>
                             {/* <input type="text" {...register("country", { required: true })} placeholder="Country" className="border border-primary-color w-full px-4 py-3 rounded-md border-gray-700  focus:border-violet-400" /> */}
                             <select className="border border-primary-color w-full px-4 py-3 rounded-md border-gray-700  "  {...register("country", { required: true })}>
                                 <option value="SelectCountry" className="">Select Country</option>
@@ -124,40 +124,40 @@ const AddTouristSpot = () => {
                         </div>
 
                         <div className="space-y-1 text-sm">
-                            <label htmlFor="location" className="block text-gray-700 text-lg">Location</label>
+                            <label htmlFor="location" className="block  text-lg">Location</label>
                             <input type="text" {...register('location', { required: true })} placeholder="Country Location" className="border border-primary-color w-full px-4 py-3 rounded-md border-gray-700  focus:border-violet-400" />
                             {errors?.name?.types?.required && <p className="text-red-500">This field is required</p>}
                         </div>
                     </div>
                     <div className="space-y-1 text-sm">
-                        <label htmlFor="Description" className="block text-gray-700 text-lg">Description</label>
+                        <label htmlFor="Description" className="block text-lg">Description</label>
                         <input type="text" {...register('description', { required: true })} placeholder="Short description" className="border border-primary-color w-full px-4 py-3 rounded-md border-gray-700  focus:border-violet-400" />
                         {errors?.name?.types?.required && <p className="text-red-500">This field is required</p>}
                     </div>
                     <div className="grid lg:grid-cols-2 gap-3 md:grid-cols-2">
                         <div className="space-y-1 text-sm">
-                            <label htmlFor="cost" className="block text-gray-700 text-lg">Average Cost</label>
+                            <label htmlFor="cost" className="block  text-lg">Average Cost</label>
                             <input type="text" {...register("avgCost", { required: true })} placeholder="Cost" className="border border-primary-color w-full px-4 py-3 rounded-md border-gray-700  focus:border-violet-400" />
                             {errors?.photoUrl?.types?.required && <p className="text-red-500">This field is required</p>}
 
                         </div>
 
                         <div className="space-y-1 text-sm">
-                            <label htmlFor="seasonality" className="block text-gray-700 text-lg">Seasonality</label>
+                            <label htmlFor="seasonality" className="block  text-lg">Seasonality</label>
                             <input type="text" {...register('season', { required: true })} placeholder="Summer, Winter..." className="border border-primary-color w-full px-4 py-3 rounded-md border-gray-700  focus:border-violet-400" />
                             {errors?.name?.types?.required && <p className="text-red-500">This field is required</p>}
                         </div>
                     </div>
                     <div className="grid lg:grid-cols-2 gap-3 md:grid-cols-2">
                         <div className="space-y-1 text-sm">
-                            <label htmlFor="travelTime" className="block text-gray-700 text-lg">Travel Time</label>
+                            <label htmlFor="travelTime" className="block  text-lg">Travel Time</label>
                             <input type="text" {...register("travelTime", { required: true })} placeholder="3 days, 7 days.." className="border border-primary-color w-full px-4 py-3 rounded-md border-gray-700  focus:border-violet-400" />
                             {errors?.photoUrl?.types?.required && <p className="text-red-500">This field is required</p>}
 
                         </div>
 
                         <div className="space-y-1 text-sm">
-                            <label htmlFor="totalVisitorsPerYear" className="block text-gray-700 text-lg">Total Visitors Per Year</label>
+                            <label htmlFor="totalVisitorsPerYear" className="block  text-lg">Total Visitors Per Year</label>
                             <input type="text" {...register('totalVisitors', { required: true })} placeholder="Total visitors" className="border border-primary-color w-full px-4 py-3 rounded-md border-gray-700  focus:border-violet-400" />
                             {errors?.name?.types?.required && <p className="text-red-500">This field is required</p>}
                         </div>
@@ -165,12 +165,12 @@ const AddTouristSpot = () => {
 
                     <div className="grid lg:grid-cols-2 gap-3 md:grid-cols-2">
                         <div className="space-y-1 text-sm">
-                            <label htmlFor="username" className="block text-gray-700 text-lg">Your Name</label>
+                            <label htmlFor="username" className="block text-lg">Your Name</label>
                             <input defaultValue={user?.displayName} type="text" {...register('name', { required: true })} placeholder="Name" className="border border-primary-color w-full px-4 py-3 rounded-md border-gray-700  focus:border-violet-400" />
                             {errors?.name?.types?.required && <p className="text-red-500">This field is required</p>}
                         </div>
                         <div className="space-y-1 text-sm">
-                            <label htmlFor="email" className="block text-gray-700 text-lg">Your Email</label>
+                            <label htmlFor="email" className="block  text-lg">Your Email</label>
                             <input defaultValue={user?.email} type="email" {...register("email", { required: true })} placeholder="Email" className="border border-primary-color w-full px-4 py-3 rounded-md border-gray-700  focus:border-violet-400" />
                             {errors?.email?.types?.required && <p className="text-red-500">This field is required</p>}
 
