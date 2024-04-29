@@ -77,12 +77,12 @@ const NavBar = () => {
         <NavLink className={({ isActive }) =>
             isActive ? "  font-medium border-b-2 border-primary-color text-primary-color p-2" : " font-medium  p-2 rounded-lg hover:text-primary-color"
         } to='/myLists'>My Lists</NavLink>
+        {/* <NavLink className={({ isActive }) =>
+            isActive ? "  font-medium border-b-2 border-primary-color text-primary-color p-2" : "font-medium  p-2 rounded-lg hover:text-primary-color"
+        } to={`/blogs/${1}`}>Blogs</NavLink> */}
         <NavLink className={({ isActive }) =>
             isActive ? "  font-medium border-b-2 border-primary-color text-primary-color p-2" : "font-medium  p-2 rounded-lg hover:text-primary-color"
-        } to={`/blogs/${1}`}>Blogs</NavLink>
-        <NavLink className={({ isActive }) =>
-            isActive ? "  font-medium border-b-2 border-primary-color text-primary-color p-2" : "font-medium  p-2 rounded-lg hover:text-primary-color"
-        } to='/feedbacks'>Feedbacks</NavLink>
+        } to='/feedback'>Feedbacks</NavLink>
         <NavLink className={({ isActive }) =>
             isActive ? "  font-medium border-b-2 border-primary-color text-primary-color p-2" : "font-medium  p-2 rounded-lg hover:text-primary-color"
         } to='/aboutUs'>About Us</NavLink>

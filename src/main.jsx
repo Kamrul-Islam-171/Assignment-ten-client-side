@@ -19,6 +19,7 @@ import MyLists from './Pages/MyLists/MyLists';
 import CountrySpots from './Pages/CountrySpots/CountrySpots';
 import Update from './Pages/Update/Update';
 import AboutUs from './Pages/AboutUs/AboutUs';
+import FeedBacks from './Pages/FeedBacks/FeedBacks';
 
 const router = createBrowserRouter([
   {
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
       {
         path:'/aboutUs',
         element:<AboutUs></AboutUs>
+      },
+      {
+        path:'/feedback', 
+        element:<FeedBacks></FeedBacks>
       }
     ]
   },
