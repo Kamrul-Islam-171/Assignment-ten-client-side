@@ -85,7 +85,7 @@ const NavBar = () => {
         } to='/feedbacks'>Feedbacks</NavLink>
         <NavLink className={({ isActive }) =>
             isActive ? "  font-medium border-b-2 border-primary-color text-primary-color p-2" : "font-medium  p-2 rounded-lg hover:text-primary-color"
-        } to='/about'>About Us</NavLink>
+        } to='/aboutUs'>About Us</NavLink>
     </>
     return (
         <div className="fixed top-0 z-10 w-full ">
