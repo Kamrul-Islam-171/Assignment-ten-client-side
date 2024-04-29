@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import SpotCard from "../../LayOuts/SpotCard/SpotCard";
 import CountryCard from "../../LayOuts/CountryCard/CountryCard";
 import Bannar2 from "../../LayOuts/Bannar2/Bannar2";
+import { SlPlane } from "react-icons/sl";
+import { RiShipLine } from "react-icons/ri";
 
 
 const Home = () => {
@@ -33,6 +35,24 @@ const Home = () => {
                 {/* <Bannar2></Bannar2> */}
             </div>
 
+            <div>
+                <div className=' flex flex-col items-center lg:flex-row gap-8 mt-[90px] container mx-auto pb-10'>
+                    {/* <h1>hello</h1> */}
+                    <div className='lg:w-[50%] ' >
+
+                        <img src={'https://i.ibb.co/pdsNLWf/1604203625-1.jpg'} className=' w-full object-cover ' alt="" />
+                        {/* <img src={property[0]?.insideImage1} className='w-full object-cover rounded-lg' alt="" /> */}
+                        {/* image */}
+                    </div>
+                    <div className='space-y-3 lg:w-[49%]'>
+                        <h1 className="text-4xl font-medium">A perfect place to get lost</h1>
+
+                        <p className="">The largest mangrove forest in the world. It stands as a testament to nature's boundless beauty and diversity. Here, amidst the labyrinthine waterways and dense foliage, one can lose themselves in a world of tranquility and wonder.</p>
+
+                    </div>
+                </div>
+            </div>
+
             <div className="container mx-auto mt-16 space-y-10">
                 <h1 className="lg:text-5xl text-xl md:text-3xl text-center font-medium">Tourists Spots</h1>
                 <div className="flex justify-center">
@@ -46,11 +66,58 @@ const Home = () => {
             </div>
 
             <div className="container mx-auto mt-16 space-y-10">
-                <h1 className="lg:text-5xl text-xl md:text-3xl text-center font-medium">Countries</h1>
+                <h1 className="lg:text-5xl text-xl md:text-3xl text-center font-medium">Explore the world</h1>
+                <div className="flex justify-center">
+                    <p className="lg:w-2/3 md:w-4/5 text-center">Embark on a global adventure and unlock the wonders of diverse cultures and landscapes. Explore iconic landmarks, hidden gems, and breathtaking natural wonders with our curated travel experiences. Let us be your guide as you journey to discover the beauty and diversity of our world.</p>
+                </div>
                 <div className="grid lg:grid-cols-3 md:grid-cols2 gap-5">
                     {
                         countries.map(countryInfo => <CountryCard key={countryInfo._id} countryInfo={countryInfo}></CountryCard>)
                     }
+                </div>
+            </div>
+
+            <div className="space-y-5 mt-14 mb-5">
+                <h1 className="lg:text-5xl text-xl md:text-3xl text-center font-medium">Choose Tour</h1>
+                <div className="flex justify-center">
+                    <p className="lg:w-1/2 md:w-4/5 text-center">Find your next travel adventure and make it memorable. Explore wildlife, enjoy seaside or book a cruise tour. Check out our popular destinations.</p>
+                </div>
+                <div className=" container mx-auto flex justify-center">
+                    <div className="grid lg:grid-cols-5 lg:gap-28 gap-12 md:gap-16 md:grid-cols-3 grid-cols-2 w-[85%]">
+                        <div className="space-y-3 flex flex-col items-center justify-center">
+                            <div className="w-[70px] h-[81px]">
+                                <img src="https://wanderers.qodeinteractive.com/wp-content/uploads/2018/03/h1-custom-icon-1-hover.png" className="h-full w-full " alt="a" loading="lazy"></img>
+                            </div>
+                            <h3 className = 'text-xl font-medium '>Self-Guided</h3>
+                        </div>
+                        <div className="space-y-3 flex flex-col items-center justify-center">
+
+                            <div className="w-[70px] h-[81px]">
+                                <img src="https://wanderers.qodeinteractive.com/wp-content/uploads/2018/03/h1-custom-icon-2-hover.png" className="h-full w-full" alt="a" loading="lazy"></img>
+
+                            </div>
+                            <h3 className = 'text-xl font-medium '>Cruises</h3>
+                        </div>
+                        <div className="space-y-3 flex flex-col items-center justify-center">
+                            <div className="w-[70px] h-[81px]">
+                                <img src="https://wanderers.qodeinteractive.com/wp-content/uploads/2018/03/h1-custom-icon-3-hover.png" className="h-full w-full" alt="a" loading="lazy"></img>
+                            </div>
+                            <h3 className = 'text-xl font-medium '>Adventure</h3>
+                        </div>
+                        <div className="space-y-3 flex flex-col items-center justify-center">
+                            <div className="w-[70px] h-[81px]">
+                                <img src="https://wanderers.qodeinteractive.com/wp-content/uploads/2018/03/h1-custom-icon-4-hover.png" className="h-full w-full" alt="a" loading="lazy"></img>
+                            </div>
+                            <h3 className = 'text-xl font-medium '>Wildlife</h3>
+
+                        </div>
+                        <div className="space-y-3 flex flex-col items-center justify-center">
+                            <div className="w-[70px] h-[81px]">
+                                <img src="https://wanderers.qodeinteractive.com/wp-content/uploads/2018/03/h1-custom-icon-5-hover.png" className="h-full w-full" alt="a" loading="lazy"></img>
+                            </div>
+                            <h3 className = 'text-xl font-medium '>Seaside</h3>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
