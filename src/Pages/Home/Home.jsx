@@ -77,7 +77,14 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="space-y-5 mt-14 mb-5">
+            
+
+           {/* <img src="https://wanderers.qodeinteractive.com/wp-content/uploads/2018/02/h1-background-3.jpg" alt="" /> */}
+            
+
+            
+
+            <div className="space-y-5 mt-14  bg-[url('https://wanderers.qodeinteractive.com/wp-content/uploads/2018/02/h1-background-3.jpg')] h-[500px] flex flex-col justify-center text-white">
                 <h1 className="lg:text-5xl text-xl md:text-3xl text-center font-medium">Choose Tour</h1>
                 <div className="flex justify-center">
                     <p className="lg:w-1/2 md:w-4/5 text-center">Find your next travel adventure and make it memorable. Explore wildlife, enjoy seaside or book a cruise tour. Check out our popular destinations.</p>
