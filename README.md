@@ -14,8 +14,7 @@ Live link : (https://assignment-ten-12823.web.app/)
 5. **Responsive Design**: The website is designed to be fully responsive and accessible on all devices.
 6. **Bannar**: The homepage has 3 slider images.
 7. **Categories**: Users can explore spots based on country name.
-8. **Customer Reviews**: The homepage includes customer reviews.
-9. **Feedback Page**: Here a user can see others feedback and can also give his feedback.
+8. **Feedback Page**: Here a user can see others feedback and can also give his feedback.
 
 
 ## Technologies Used
