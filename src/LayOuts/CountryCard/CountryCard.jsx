@@ -4,9 +4,12 @@ import PropTypes from 'prop-types'; // ES6
 import { Link } from 'react-router-dom';
 const CountryCard = ({countryInfo}) => {
     const { image, country, description} = countryInfo;
+    const scrollToTop = () => {
+        window.scrollTo(0, 0)
+    }
     return (
         
-        <Link to={`/touristSpots/${country}`} className="shadow-md border border-gray-200" >
+        <Link to={`/touristSpots/${country}`} onClick={scrollToTop} className="shadow-md border border-gray-200" >
             <div className="w-full h-[400px] overflow-hidden relative" id="container">
                 <img className="w-full object-cover h-full image1" src={image} alt="" />
                 <h1 className={ 'text-3xl font-medium absolute top-8 left-4  text-white'}>{country}</h1>
