@@ -1,6 +1,6 @@
 # Tourista
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live link : (https://assignment-ten-12823.web.app/)
 
 ### Selected Category : Southeast Asia.
 
