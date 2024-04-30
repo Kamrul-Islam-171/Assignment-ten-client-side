@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
-import SpotCard from "../../LayOuts/SpotCard/SpotCard";
+
 import { MdEdit } from "react-icons/md";
 import { MdDeleteForever } from "react-icons/md";
 

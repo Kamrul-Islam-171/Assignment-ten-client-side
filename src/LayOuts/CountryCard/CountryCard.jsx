@@ -1,8 +1,9 @@
-import React from 'react';
+
 import './country.css'
+import PropTypes from 'prop-types'; // ES6
 import { Link } from 'react-router-dom';
 const CountryCard = ({countryInfo}) => {
-    const {_id, image, country, description} = countryInfo;
+    const { image, country, description} = countryInfo;
     return (
         
         <Link to={`/touristSpots/${country}`} className="shadow-md border border-gray-200" >
@@ -19,5 +20,9 @@ const CountryCard = ({countryInfo}) => {
         </Link>
     );
 };
+
+CountryCard.propTypes = {
+    countryInfo:PropTypes.object
+}
 
 export default CountryCard;

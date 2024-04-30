@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
-import useFecth from "../../Utilities/useFecth";
+
 
 const NavBar = () => {
 

@@ -1,24 +1,24 @@
 import { Helmet } from "react-helmet-async";
 import Bannar from "../../LayOuts/Bannar/Bannar";
-import { useLoaderData } from "react-router-dom";
+// import { useLoaderData } from "react-router-dom";
 import { useEffect, useState } from "react";
 import SpotCard from "../../LayOuts/SpotCard/SpotCard";
 import CountryCard from "../../LayOuts/CountryCard/CountryCard";
-import Bannar2 from "../../LayOuts/Bannar2/Bannar2";
-import { SlPlane } from "react-icons/sl";
-import { RiShipLine } from "react-icons/ri";
+
 import { Fade } from "react-awesome-reveal";
 
 
 const Home = () => {
     const [spots, setSpots] = useState([]);
     const [countries, setCountries] = useState([]);
-    const scrollToTop = () => {
-        window.scrollTo(0, 0)
-    }
+    // const scrollToTop = () => {
+    //     window.scrollTo(0, 0)
+    // }
 
     useEffect(() => {
+        // fetch('http://localhost:5000/allSpots')
         fetch('https://assignment-ten-server-side-delta.vercel.app/allSpots')
+        // fetch('http://assignment-ten-server-side-delta.vercel.app/allSpots')
             .then(res => res.json())
             .then(data => setSpots(data))
 
@@ -54,7 +54,7 @@ const Home = () => {
                         <Fade direction="right" duration={1000}>
                             <h1 className="text-4xl font-medium">A perfect place to get lost</h1>
 
-                            <p className="">The largest mangrove forest in the world. It stands as a testament to nature's boundless beauty and diversity. Here, amidst the labyrinthine waterways and dense foliage, one can lose themselves in a world of tranquility and wonder.</p>
+                            <p className="">The largest mangrove forest in the world. It stands as a testament to nature boundless beauty and diversity. Here, amidst the labyrinthine waterways and dense foliage, one can lose themselves in a world of tranquility and wonder.</p>
                         </Fade>
 
                     </div>

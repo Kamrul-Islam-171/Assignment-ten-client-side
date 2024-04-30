@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import './card.css'
-
+import PropTypes from 'prop-types'; 
 
 const SpotCard = ({ spotInfo, isShow, isDescription }) => {
     const { _id, photoUrl, spotName, country, location, description, avgCost, season, travelTime, totalVisitors } = spotInfo
@@ -41,5 +41,12 @@ const SpotCard = ({ spotInfo, isShow, isDescription }) => {
         </div>
     );
 };
+
+SpotCard.propTypes = {
+    spotInfo:PropTypes.object,
+    isShow : PropTypes.bool,
+    isDescription: PropTypes.bool
+
+}
 
 export default SpotCard;

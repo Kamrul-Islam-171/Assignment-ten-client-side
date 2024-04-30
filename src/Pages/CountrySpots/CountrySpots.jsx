@@ -22,7 +22,7 @@ const CountrySpots = () => {
         return <div className="flex justify-center items-center h-screen"><SyncLoader color="#36d7b7" /></div>
     }
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto mb-16">
             <Helmet>
                 <title>{country}</title>
             </Helmet>

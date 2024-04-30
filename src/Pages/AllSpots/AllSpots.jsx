@@ -2,14 +2,26 @@ import { useLoaderData } from "react-router-dom";
 import SpotCard from "../../LayOuts/SpotCard/SpotCard";
 import { Helmet } from "react-helmet-async";
 import { useEffect, useState } from "react";
+import { SyncLoader } from "react-spinners";
 
 
 const AllSpots = () => {
-    const data = useLoaderData();
+    // const data = useLoaderData();
     const [toggle, setToggle] = useState(false);
     const [defaultData, setDefaultData] = useState(false);
 
-    const [sortData, setSortData] = useState(data);
+    const [sortData, setSortData] = useState([]);
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        setLoading(true);
+        fetch('https://assignment-ten-server-side-delta.vercel.app/allTouristSpots')
+            .then(res => res.json())
+            .then(data => {
+                setSortData(data)
+                setLoading(false);
+            })
+    }, [])
 
 
     useEffect(() => {
@@ -17,26 +29,35 @@ const AllSpots = () => {
         console.log(defaultData)
         console.log('toggle = ', toggle)
         if (toggle === true) {
-
+            setLoading(true)
             fetch('https://assignment-ten-server-side-delta.vercel.app/allSortedTouristSpots')
                 .then(res => res.json())
-                .then(data => setSortData(data))
+                .then(data => {
+
+                    setSortData(data)
+                    setLoading(false)
+                })
 
         }
         else if (defaultData === true) {
-
+            setLoading(true)
             fetch('https://assignment-ten-server-side-delta.vercel.app/allTouristSpots')
                 .then(res => res.json())
                 .then(data => {
                     setSortData(data);
+                    setLoading(false)
                 })
 
         }
     }, [toggle, defaultData])
 
+    if (loading) {
+        return <div className="flex justify-center items-center h-screen"><SyncLoader color="#36d7b7" /></div>
+    }
+
     // if(loading) {<span className="loading loading-spinner loading-lg"></span>}
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto mb-16">
             <Helmet>
                 <title>All Tourist Spots</title>
             </Helmet>
