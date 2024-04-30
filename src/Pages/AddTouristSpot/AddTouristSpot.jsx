@@ -23,7 +23,7 @@ const AddTouristSpot = () => {
         AOS.init();
     }, [])
 
-  
+
 
 
 
@@ -47,7 +47,7 @@ const AddTouristSpot = () => {
         if (isSubmitSuccessful) {
             reset()
         }
-    }, [ isSubmitSuccessful, reset])
+    }, [isSubmitSuccessful, reset])
 
     const onSubmit = (data) => {
         const name = data.name;
@@ -63,7 +63,7 @@ const AddTouristSpot = () => {
         const totalVisitors = data.totalVisitors;
         const info = { photoUrl, spotName, country, location, description, avgCost, season, travelTime, totalVisitors, name, email };
 
-        fetch('http://localhost:5000/addSpot', {
+        fetch('https://assignment-ten-server-side-delta.vercel.app/addSpot', {
             method: "POST",
             headers: {
                 'content-type': 'application/json',
@@ -84,11 +84,11 @@ const AddTouristSpot = () => {
 
     }
     return (
-        <div className="container mx-auto bg-third-color px-6 py-3 rounded-md">
+        <div className="container mx-auto bg-third-color px-6 py-3 rounded-md mb-8">
             <Helmet>
                 <title>Add Spot</title>
             </Helmet>
-            <h1 className="text-5xl text-center font-medium">Add Your Spot</h1>
+            <h1 className="text-5xl text-center font-medium mt-5">Add Your Spot</h1>
             <div className="">
                 <form noValidate="" className="space-y-3 mt-10 mb-6 " onSubmit={handleSubmit(onSubmit)}>
                     <div className="grid lg:grid-cols-2 gap-3 md:grid-cols-2">

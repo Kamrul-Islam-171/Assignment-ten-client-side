@@ -8,29 +8,29 @@ const AllSpots = () => {
     const data = useLoaderData();
     const [toggle, setToggle] = useState(false);
     const [defaultData, setDefaultData] = useState(false);
-    
+
     const [sortData, setSortData] = useState(data);
 
-    
+
     useEffect(() => {
-        
+
         console.log(defaultData)
         console.log('toggle = ', toggle)
         if (toggle === true) {
 
-            fetch('http://localhost:5000/allSortedTouristSpots')
+            fetch('https://assignment-ten-server-side-delta.vercel.app/allSortedTouristSpots')
                 .then(res => res.json())
                 .then(data => setSortData(data))
-             
+
         }
         else if (defaultData === true) {
 
-            fetch('http://localhost:5000/allTouristSpots')
+            fetch('https://assignment-ten-server-side-delta.vercel.app/allTouristSpots')
                 .then(res => res.json())
                 .then(data => {
                     setSortData(data);
                 })
-                
+
         }
     }, [toggle, defaultData])
 

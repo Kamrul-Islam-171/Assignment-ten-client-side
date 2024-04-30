@@ -6,6 +6,13 @@ import './card.css'
 const SpotCard = ({ spotInfo, isShow, isDescription }) => {
     const { _id, photoUrl, spotName, country, location, description, avgCost, season, travelTime, totalVisitors } = spotInfo
     // console.log(country)
+    // const scrollToTop = () => {
+    //     window.scrollTo(0, 0)
+    // }
+
+    // const handleDetails = () => {
+    //     scrollToTop()
+    // }
     return (
         <div className="shadow-md border border-gray-200">
             <div className="w-full h-[400px] overflow-hidden" id="container">
@@ -29,7 +36,7 @@ const SpotCard = ({ spotInfo, isShow, isDescription }) => {
                         </div>
                     </div>
                 }
-                <Link to={`/spot/${_id}`}><button className="btn mt-2 bg-white text-primary-color hover:bg-primary-color hover:text-white border border-primary-color px-5">View Details</button></Link>
+                <Link to={`/spot/${_id}`}><button  className="btn mt-2 bg-white text-primary-color hover:bg-primary-color hover:text-white border border-primary-color px-5">View Details</button></Link>
             </div>
         </div>
     );

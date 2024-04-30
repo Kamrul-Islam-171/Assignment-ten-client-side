@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
+import { SyncLoader } from 'react-spinners';
 
 
 const FeedBacks = () => {
@@ -19,7 +20,7 @@ const FeedBacks = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch('http://localhost:5000/feedBacks')
+        fetch('https://assignment-ten-server-side-delta.vercel.app/feedBacks')
             .then(res => res.json())
             .then(data => {
 
@@ -50,7 +51,7 @@ const FeedBacks = () => {
         // console.log(userReply)
         // console.log('i am in')
 
-        fetch('http://localhost:5000/feedBacks', {
+        fetch('https://assignment-ten-server-side-delta.vercel.app/feedBacks', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -73,7 +74,7 @@ const FeedBacks = () => {
 
     }
     if (loading) {
-        return <div className=' flex justify-center h-screen'><span className="loading loading-dots loading-lg "></span></div>
+        return <div className="flex justify-center items-center h-screen"><SyncLoader color="#36d7b7" /></div>
     }
 
 

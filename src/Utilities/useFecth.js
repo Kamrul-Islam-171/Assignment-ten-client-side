@@ -6,7 +6,7 @@ const useFecth = () => {
 
     const [defaultTheme, setDefaultTheme] = useState('light');
     useEffect(() => {
-        fetch('http://localhost:5000/theme').
+        fetch('https://assignment-ten-server-side-delta.vercel.app/theme').
             then(res => res.json())
             .then(data => setDefaultTheme(data[0].theme))
     }, [])

@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.inter {
+    font-family: "Inter", sans-serif;
+
+}
 
 
 :root {
@@ -16,8 +24,8 @@
     --secondary-color: #1fd65566;
     --third-color: #1fd65533;
 
-    /* --primary-color: #234DD4;
-    --secondary-color: #234DD466;
-    --third-color: #234DD433; */
+    /* --primary-color: #1E88E5;
+    --secondary-color: #1E88E566;
+    --third-color: #1E88E533; */
 
 }

@@ -13,14 +13,14 @@ const Update = () => {
 
     const { _id, photoUrl, spotName, country, location, description, avgCost, season, travelTime, totalVisitors, } = spot;
     // console.log(spotName)
-  
-   
+
+
 
     // useEffect(() => {
     //     AOS.init();
     // }, [])
 
-  
+
 
 
 
@@ -40,7 +40,7 @@ const Update = () => {
         // mode: "onChange"
     })
 
-   
+
 
     const onSubmit = (data) => {
         const name = data.name;
@@ -56,7 +56,7 @@ const Update = () => {
         const totalVisitors = data.totalVisitors;
         const info = { photoUrl, spotName, country, location, description, avgCost, season, travelTime, totalVisitors };
         console.log(info)
-        fetch(`http://localhost:5000/update/${_id}`, {
+        fetch(`https://assignment-ten-server-side-delta.vercel.app/update/${_id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json',
@@ -78,8 +78,8 @@ const Update = () => {
             <Helmet>
                 <title>Update Spot</title>
             </Helmet>
-            <div className="container mx-auto bg-third-color px-6 py-3 rounded-md">
-                <h1 className="text-5xl text-center font-medium">Update Your Spot</h1>
+            <div className="container mx-auto bg-third-color px-6 py-3 rounded-md mb-8">
+                <h1 className="text-5xl text-center font-medium mt-5">Update Your Spot</h1>
                 <div className="">
                     <form noValidate="" className="space-y-3 mt-10 mb-6 " onSubmit={handleSubmit(onSubmit)}>
                         <div className="grid lg:grid-cols-2 gap-3 md:grid-cols-2">

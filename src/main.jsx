@@ -32,48 +32,48 @@ const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
-        path:'/login',
-        element:<Login></Login>
+        path: '/login',
+        element: <Login></Login>
       },
       {
-        path:'/register',
-        element:<Register></Register>
+        path: '/register',
+        element: <Register></Register>
       },
       {
-        path:'/addSpot',
+        path: '/addSpot',
         element: <PrivateRoute><AddTouristSpot></AddTouristSpot></PrivateRoute>
-        
+
       },
       {
-        path:'/allSpots',
-        element:<AllSpots></AllSpots>,
-        loader: () => fetch('http://localhost:5000/allTouristSpots')
-        
+        path: '/allSpots',
+        element: <AllSpots></AllSpots>,
+        loader: () => fetch('https://assignment-ten-server-side-delta.vercel.app/allTouristSpots')
+
       },
       {
-        path:'/spot/:id',
-        element : <PrivateRoute><SpotDetails></SpotDetails></PrivateRoute>
+        path: '/spot/:id',
+        element: <PrivateRoute><SpotDetails></SpotDetails></PrivateRoute>
       },
       {
-        path:'/myLists',
-        element:<PrivateRoute><MyLists></MyLists></PrivateRoute>
+        path: '/myLists',
+        element: <PrivateRoute><MyLists></MyLists></PrivateRoute>
       },
       {
-        path:'/touristSpots/:country',
-        element:<CountrySpots></CountrySpots>
+        path: '/touristSpots/:country',
+        element: <CountrySpots></CountrySpots>
       },
       {
-        path:'/update/:id',
-        element:<Update></Update>,
-        loader:({params}) => fetch(`http://localhost:5000/spot/${params.id}`)
+        path: '/update/:id',
+        element: <Update></Update>,
+        loader: ({ params }) => fetch(`https://assignment-ten-server-side-delta.vercel.app/spot/${params.id}`)
       },
       {
-        path:'/aboutUs',
-        element:<AboutUs></AboutUs>
+        path: '/aboutUs',
+        element: <AboutUs></AboutUs>
       },
       {
-        path:'/feedback', 
-        element:<FeedBacks></FeedBacks>
+        path: '/feedback',
+        element: <FeedBacks></FeedBacks>
       }
     ]
   },

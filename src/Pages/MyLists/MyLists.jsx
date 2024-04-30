@@ -7,23 +7,24 @@ import { MdDeleteForever } from "react-icons/md";
 import Swal from 'sweetalert2'
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { SyncLoader } from "react-spinners";
 
 const MyLists = () => {
     const { user } = useContext(AuthContext);
     const [myData, setMydata] = useState([]);
     const [deleteCnt, setDeleteCnt] = useState(false)
-    // const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(false);
     console.log(user)
 
     console.log("hello")
 
     useEffect(() => {
-        // setLoading(true);
-        fetch(`http://localhost:5000/mySpots/${user.email}`)
+        setLoading(true);
+        fetch(`https://assignment-ten-server-side-delta.vercel.app/mySpots/${user.email}`)
             .then(res => res.json())
             .then(data => {
                 setMydata(data)
-                // setLoading(false);
+                setLoading(false);
             })
     }, [user, deleteCnt])
     // if(loading) {
@@ -42,7 +43,7 @@ const MyLists = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/spot/${id}`, {
+                fetch(`https://assignment-ten-server-side-delta.vercel.app/spot/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -68,7 +69,10 @@ const MyLists = () => {
         });
     }
 
-    console.log(myData)
+    // console.log(myData)
+    if (loading) {
+        return <div className="flex justify-center items-center h-screen"><SyncLoader color="#36d7b7" /></div>
+    }
     return (
         <div className="container mx-auto mb-12">
             <Helmet>
