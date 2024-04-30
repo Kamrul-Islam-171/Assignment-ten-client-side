@@ -33,10 +33,12 @@ This template provides a minimal setup to get React working in Vite with HMR and
 - [React Awesome Reveal](https://www.npmjs.com/package/react-awesome-reveal): A library for animating React components when they become visible on the screen.
 - [React Tooltip](https://www.npmjs.com/package/react-tooltip): A customizable tooltip component for React applications.
 - [Sweet Alert](https://sweetalert2.github.io/): A library for creating beautiful, responsive, and customizable alerts and modals.
+- [React helmet async](https://www.npmjs.com/package/react-helmet-async): This package is a fork of React Helmet. <Helmet> usage is synonymous, but server and client now requires <HelmetProvider> to encapsulate state per request.
+- [React Icons](https://react-icons.github.io/react-icons/):Include popular icons in your React projects easily with react-icons, which utilizes ES6 imports that allows you to include only the icons that your project is using.
 
 
+## Usages of Tourista
 
-Currently, two official plugins are available:
+- Navigate to the homepage to explore Countires and spots.
+- Log in to add, update, or delete your own spots.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
