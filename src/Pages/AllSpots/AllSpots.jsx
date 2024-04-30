@@ -76,7 +76,7 @@ const AllSpots = () => {
                     </ul>
                 </div>
             </div>
-            <div className="grid lg:grid-cols-3 md:grid-cols2 gap-5">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5">
                 {
                     sortData.map(spotInfo => <SpotCard spotInfo={spotInfo} isDescription={false} isShow={true} key={spotInfo._id}></SpotCard>)
                 }

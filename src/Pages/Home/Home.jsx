@@ -66,7 +66,7 @@ const Home = () => {
                 <div className="flex justify-center">
                     <p className="lg:w-2/3 md:w-4/5 text-center">Discover captivating tourist spots worldwide with our curated travel guides. Embark on unforgettable journeys to iconic tourist destinations around the globe.</p>
                 </div>
-                <div className="grid lg:grid-cols-3 md:grid-cols2 gap-5">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5">
                     {
                         spots.map(spotInfo => <SpotCard spotInfo={spotInfo} isDescription={false} isShow={false} key={spotInfo._id}></SpotCard>)
                     }
@@ -78,7 +78,7 @@ const Home = () => {
                 <div className="flex justify-center">
                     <p className="lg:w-2/3 md:w-4/5 text-center">Embark on a global adventure and unlock the wonders of diverse cultures and landscapes. Explore iconic landmarks, hidden gems, and breathtaking natural wonders with our curated travel experiences. Let us be your guide as you journey to discover the beauty and diversity of our world.</p>
                 </div>
-                <div className="grid lg:grid-cols-3 md:grid-cols2 gap-5">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5">
                     {
                         countries.map(countryInfo => <CountryCard key={countryInfo._id} countryInfo={countryInfo}></CountryCard>)
                     }

@@ -48,7 +48,7 @@ const AboutUs = () => {
                 </div>
             </div>
 
-            <div className="grid lg:grid-cols-3 gap-5  container mx-auto mt-16">
+            <div className="grid lg:grid-cols-3 gap-5 md:grid-cols-2 container mx-auto mt-16">
                 {/* mission */}
                 <Zoom direction="in" duration={1000}> <div className="border-2 h-[340px] lg:p-10 p-2 md:p-5 flex flex-col justify-center items-center text-center space-y-5">
                     <h1 className="text-3xl">Our Mission</h1>
@@ -76,7 +76,7 @@ const AboutUs = () => {
                     <Zoom direction="in" duration={1000}><h1 className="lg:text-4xl md:text-3xl text-2xl">Meet Our Team Members</h1></Zoom>
                     <Fade direction="left" duration={2000}><p className="text-center">Meet the passionate individuals who make Tourista possible. Our team is comprised of experienced travel experts, destination specialists, and customer service professionals who share a common love for Southeast Asia.</p></Fade>
                 </div>
-                <div className="lg:w-1/2 md:3-1/2 container mx-auto">
+                <div className="lg:w-1/2 md:w-1/2 container mx-auto">
                     <Fade direction="right" duration={1000}><CircularSlider></CircularSlider></Fade>
                 </div>
 
