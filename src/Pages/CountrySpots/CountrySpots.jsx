@@ -26,6 +26,7 @@ const CountrySpots = () => {
             <Helmet>
                 <title>{country}</title>
             </Helmet>
+            <h1 className="text-4xl text-center mt-12 font-medium mb-12">{country}</h1>
             <div className="grid lg:grid-cols-3 md:grid-cols2 gap-5">
                 {
                     countrySpots.map(spotInfo => <SpotCard spotInfo={spotInfo} isDescription={true} isShow={true} key={spotInfo._id}></SpotCard>)
