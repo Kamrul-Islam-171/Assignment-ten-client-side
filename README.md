@@ -18,6 +18,24 @@ This template provides a minimal setup to get React working in Vite with HMR and
 9. **Feedback Page**: Here a user can see others feedback and can also give his feedback.
 
 
+## Technologies Used
+
+- [React](https://reactjs.org/): A JavaScript library for building user interfaces.
+- [MongoDB](https://www.mongodb.com/): A NoSQL database for storing data in JSON-like documents.
+- [Express.js](https://expressjs.com/): A web application framework for Node.js used for building APIs and web servers.
+- [Node.js](https://nodejs.org/): A JavaScript runtime environment that executes JavaScript code outside a web browser.
+- [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework for rapidly building custom designs.
+- [DaisyUI](https://daisyui.com/): A component library built on top of Tailwind CSS for building accessible and customizable UI components.
+
+
+## NPM pacages used
+- [React Simple Typewriter](https://www.npmjs.com/package/react-simple-typewriter): A simple typewriter effect for React components.
+- [React Awesome Reveal](https://www.npmjs.com/package/react-awesome-reveal): A library for animating React components when they become visible on the screen.
+- [React Tooltip](https://www.npmjs.com/package/react-tooltip): A customizable tooltip component for React applications.
+- [Sweet Alert](https://sweetalert2.github.io/): A library for creating beautiful, responsive, and customizable alerts and modals.
+
+
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
