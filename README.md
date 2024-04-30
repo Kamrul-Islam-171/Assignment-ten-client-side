@@ -1,6 +1,6 @@
 # Tourista
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live link : (https://assignment-ten-12823.web.app/)
 
 ### Selected Category : Southeast Asia.
 
@@ -14,8 +14,7 @@ This template provides a minimal setup to get React working in Vite with HMR and
 5. **Responsive Design**: The website is designed to be fully responsive and accessible on all devices.
 6. **Bannar**: The homepage has 3 slider images.
 7. **Categories**: Users can explore spots based on country name.
-8. **Customer Reviews**: The homepage includes customer reviews.
-9. **Feedback Page**: Here a user can see others feedback and can also give his feedback.
+8. **Feedback Page**: Here a user can see others feedback and can also give his feedback.
 
 
 ## Technologies Used
